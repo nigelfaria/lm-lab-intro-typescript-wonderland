@@ -1,5 +1,6 @@
 import { endAdventure, haveAdventures } from '..';
 import { askQuestion, clear, print } from '../console';
+import { goShopping } from './7_go_shopping';
 
 // This is a very unusual type setup. It's pobably not a great idea in the real world to nest so many properties
 // with the exact same name. But in Wonderland, this sort of thing is normal, so we've just got to find a way through it...
@@ -35,8 +36,8 @@ export function wakeUp(): void {
 		);
 
 		return askQuestion(
-			'Press ENTER to re-enter Wonderland! ',
-			haveAdventures
+			'Time to go shopping',
+			goShopping
 		);
 	} else {
 		print('You are unable to wake up! 😱');
